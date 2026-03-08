@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "tagline": "AI-Powered Digital Agency",
+    "title": "We Build Intelligent Solutions That Drive Growth",
+    "description": "From AI automation to custom development, we help businesses across London, Pune, and Lagos transform with cutting-edge technology.",
+    "cta": "Start Your Project",
+    "secondaryCta": "View Our Work"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "End-to-end AI and digital solutions tailored to your business needs"
+  },
+  "stats": {
+    "title": "Trusted by Businesses Worldwide",
+    "projects": "Projects Delivered",
+    "clients": "Happy Clients",
+    "countries": "Countries Served",
+    "uptime": "Uptime Guarantee"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Real results from real partnerships"
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "description": "Let's discuss how AI can accelerate your growth. Book a free consultation today.",
+    "button": "Book a Call"
+  },
+  "about": {
+    "title": "About AdmireIT",
+    "subtitle": "Building the future of AI-driven businesses",
+    "mission": "Our Mission",
+    "missionText": "To democratise AI technology and make it accessible for businesses of every size, from startups in Lagos to enterprises in London.",
+    "story": "Our Story",
+    "storyText": "Founded with a vision to bridge the gap between cutting-edge AI research and practical business applications, AdmireIT has grown into a global agency serving clients across three continents.",
+    "teamTitle": "Meet the Team",
+    "teamSubtitle": "Talented people building amazing things"
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "subtitle": "Case studies showcasing real impact",
+    "viewCase": "View Case Study"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights, tutorials, and industry updates",
+    "readMore": "Read More",
+    "latestTitle": "Latest from the Blog"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Tell us about your project and we'll get back to you within 24 hours",
+    "name": "Full Name",
+    "email": "Email Address",
+    "company": "Company",
+    "service": "Service Interest",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! We'll be in touch soon.",
+    "error": "Something went wrong. Please try again.",
+    "services": {
+      "aiAutomation": "AI Automation",
+      "customDev": "Custom Development",
+      "aiChatbot": "AI Chatbot",
+      "consulting": "AI Consulting",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "description": "AI-powered digital agency helping businesses transform with intelligent solutions.",
+    "quickLinks": "Quick Links",
+    "getInTouch": "Get in Touch",
+    "rights": "All rights reserved.",
+    "london": "London, United Kingdom",
+    "pune": "Pune, India",
+    "lagos": "Lagos, Nigeria"
+  }
+}
