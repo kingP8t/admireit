@@ -12,7 +12,7 @@ const testimonials = [
     company: "TechFlow Solutions",
     role: "CTO",
     quote:
-      "AdmireIT transformed our customer support with an AI chatbot that handles 70% of queries automatically. Game-changer for our business.",
+      "AdmireTech transformed our customer support with an AI chatbot that handles 70% of queries automatically. Game-changer for our business.",
     rating: 5,
   },
   {
@@ -28,7 +28,7 @@ const testimonials = [
     company: "LagosStartup Hub",
     role: "CEO",
     quote:
-      "Working with AdmireIT felt like having a tech partner, not just a vendor. They delivered beyond our expectations.",
+      "Working with AdmireTech felt like having a tech partner, not just a vendor. They delivered beyond our expectations.",
     rating: 5,
   },
 ];

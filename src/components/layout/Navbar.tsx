@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { CalBookingButton } from "@/components/CalBookingButton";
 
 const navLinks = [
   { href: "/", key: "home" },
@@ -29,7 +30,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <span className="text-2xl font-bold text-white">
-              Admire<span className="text-accent">IT</span>
+              Admire<span className="text-accent">Tech</span>
             </span>
           </Link>
 
@@ -49,12 +50,9 @@ export function Navbar() {
                 {t(link.key)}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-lg hover:bg-accent-warm transition-colors"
-            >
+            <CalBookingButton className="px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-lg hover:bg-accent-warm transition-colors">
               {t("getStarted")}
-            </Link>
+            </CalBookingButton>
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,13 +90,11 @@ export function Navbar() {
                     {t(link.key)}
                   </Link>
                 ))}
-                <Link
-                  href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="block mx-4 mt-4 px-5 py-3 bg-accent text-white text-sm font-semibold rounded-lg text-center hover:bg-accent-warm transition-colors"
-                >
-                  {t("getStarted")}
-                </Link>
+                <div className="mx-4 mt-4">
+                  <CalBookingButton className="block w-full px-5 py-3 bg-accent text-white text-sm font-semibold rounded-lg text-center hover:bg-accent-warm transition-colors">
+                    {t("getStarted")}
+                  </CalBookingButton>
+                </div>
               </div>
             </motion.div>
           )}

@@ -36,14 +36,14 @@
     "button": "Book a Call"
   },
   "about": {
-    "title": "About AdmireIT",
-    "subtitle": "Building the future of AI-driven businesses",
+    "title": "About AdmireTech",
+    "subtitle": "Incorporated in England since 2015 — building the future of AI-driven businesses across three continents.",
     "mission": "Our Mission",
     "missionText": "To democratise AI technology and make it accessible for businesses of every size, from startups in Lagos to enterprises in London.",
     "story": "Our Story",
-    "storyText": "Founded with a vision to bridge the gap between cutting-edge AI research and practical business applications, AdmireIT has grown into a global agency serving clients across three continents.",
+    "storyText": "Incorporated in England in 2015 by Peter King, AdmireTech grew from a boutique development consultancy into a global AI agency spanning 7 countries and 3 continents.",
     "teamTitle": "Meet the Team",
-    "teamSubtitle": "Talented people building amazing things"
+    "teamSubtitle": "13 specialists across 7 countries — united by a passion for AI that works"
   },
   "portfolio": {
     "title": "Our Work",
@@ -81,8 +81,8 @@
     "quickLinks": "Quick Links",
     "getInTouch": "Get in Touch",
     "rights": "All rights reserved.",
-    "london": "London, United Kingdom",
-    "pune": "Pune, India",
-    "lagos": "Lagos, Nigeria"
+    "london": "167-169 Great Portland Street, 5th Floor, London W1W 5PF",
+    "pune": "4th Floor, Prabha vee Tech Park, Baner Rd, Pune 411045",
+    "lagos": "10 Hughes Ave, Yaba, Lagos, Nigeria"
   }
 }

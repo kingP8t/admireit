@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
+import { CalBookingButton } from "@/components/CalBookingButton";
 
 export function CTA() {
   const t = useTranslations("cta");
@@ -27,16 +28,22 @@ export function CTA() {
             <p className="mt-4 text-text-secondary text-lg max-w-xl mx-auto">
               {t("description")}
             </p>
-            <Link
-              href="/contact"
-              className="mt-8 inline-flex items-center gap-2 px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-accent-warm transition-colors group"
-            >
-              {t("button")}
-              <ArrowRight
-                size={18}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </Link>
+            <div className="mt-8 flex flex-wrap gap-4 justify-center">
+              <CalBookingButton className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-accent-warm transition-colors">
+                {t("button")}
+                <Calendar size={18} />
+              </CalBookingButton>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white/[0.06] border border-white/10 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors group"
+              >
+                Send a Message
+                <ArrowRight
+                  size={18}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
+              </Link>
+            </div>
           </div>
         </motion.div>
       </div>

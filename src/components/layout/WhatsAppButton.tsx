@@ -10,7 +10,7 @@ export function WhatsAppButton() {
   if (pathname?.startsWith("/studio")) return null;
 
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Hi%20AdmireIT%2C%20I%27d%20like%20to%20discuss%20a%20project.`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Hi%20AdmireTech%2C%20I%27d%20like%20to%20discuss%20a%20project.`;
 
   return (
     <a

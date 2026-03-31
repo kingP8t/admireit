@@ -1,0 +1,44 @@
+# AdmireTech — AI-Powered Digital Agency
+
+> AI agency helping businesses transform with intelligent solutions. Offices in London, Pune, and Lagos.
+
+## About
+AdmireTech is a global AI agency founded in 2015 in England. We have 13 team members across 7 countries, specialising in AI chatbots, automation, custom development, and consulting. We deliver measurable ROI through production-grade AI solutions.
+
+## Services
+- [AI Chatbots](https://www.admireit.co/services/ai-chatbots): Custom AI chatbots for customer support, lead generation, and internal workflows.
+- [AI Automation](https://www.admireit.co/services/ai-automation): Intelligent workflow automation, document processing, and custom integrations.
+- [Custom Development](https://www.admireit.co/services/custom-development): Full-stack web and mobile applications with deep AI integration.
+- [AI Consulting](https://www.admireit.co/services/ai-consulting): AI readiness assessments, strategy roadmaps, and implementation guidance.
+- [Outcome-Based Development](https://www.admireit.co/services/outcome-based-development): Pay-per-feature model with aligned incentives.
+- [Fractional AI Developers](https://www.admireit.co/services/fractional-ai-developers): On-demand AI and ML engineering talent.
+
+## Key Pages
+- [Homepage](https://www.admireit.co)
+- [About](https://www.admireit.co/about)
+- [Services](https://www.admireit.co/services)
+- [Portfolio](https://www.admireit.co/portfolio)
+- [Blog](https://www.admireit.co/blog)
+- [Contact](https://www.admireit.co/contact)
+
+## Portfolio
+- [AI-Driven MFB Transformation](https://www.admireit.co/portfolio/mfb-ai-transformation)
+- [EasyBuy VIP Loan](https://www.admireit.co/portfolio/easybuy-vip-loan)
+- [LLM Enterprise Chatbot](https://www.admireit.co/portfolio/llm-enterprise-chatbot)
+- [Warehouse Management PWA](https://www.admireit.co/portfolio/warehouse-management-pwa)
+- [Fractional AI Developer](https://www.admireit.co/portfolio/fractional-ai-developer)
+
+## Blog
+- [Why Africa & South Asia Are the Next Frontiers for AI-Powered Businesses](https://www.admireit.co/blog/ai-in-developing-countries-africa-south-asia)
+- [How AI Chatbots Are Revolutionising Customer Support in 2026](https://www.admireit.co/blog/ai-chatbots-customer-support)
+- [The Complete Guide to AI Automation for Small Businesses](https://www.admireit.co/blog/ai-automation-small-business)
+- [Why Every Business Needs an AI Strategy in 2026](https://www.admireit.co/blog/ai-strategy-2026)
+- [Building Scalable AI Applications with Next.js and Python](https://www.admireit.co/blog/scalable-ai-nextjs-python)
+- [The Ethics of AI in Business](https://www.admireit.co/blog/ai-ethics-business)
+- [5 Ways AI Is Transforming the African Tech Ecosystem](https://www.admireit.co/blog/ai-transforming-african-tech-ecosystem)
+
+## Contact
+- Email: hello@admireit.co
+- London: 167-169 Great Portland Street, 5th Floor, London W1W 5PF, UK
+- Pune: 4th Floor, Prabha vee Tech Park, Baner Rd, Pune 411045, India
+- Lagos: 10 Hughes Ave, Yaba, Lagos, Nigeria

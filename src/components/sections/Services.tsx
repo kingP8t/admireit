@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Bot, Zap, Code, Brain, LineChart, Shield } from "lucide-react";
+import { Bot, Zap, Code, Brain, Target, Users } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
@@ -32,16 +32,16 @@ const services = [
       "Strategic guidance on AI adoption, from feasibility studies to full implementation roadmaps.",
   },
   {
-    icon: LineChart,
-    title: "Data Analytics",
+    icon: Target,
+    title: "Outcome Based Development",
     description:
-      "Turn raw data into actionable insights with custom dashboards and predictive analytics.",
+      "We tie our delivery to your business results. Pay for outcomes, not hours — aligned incentives that guarantee impact.",
   },
   {
-    icon: Shield,
-    title: "AI Security",
+    icon: Users,
+    title: "Hire Fractional AI & ML Developers",
     description:
-      "Protect your AI systems with robust security measures, auditing, and compliance frameworks.",
+      "Access top-tier AI and ML engineers on a fractional basis \u2014 scale your team without full-time overhead.",
   },
 ];
 

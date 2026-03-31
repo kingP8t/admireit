@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { postmark } from "@/lib/postmark";
+import { transporter } from "@/lib/mail";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -15,23 +15,23 @@ export async function POST(request: Request) {
     const body = await request.json();
     const data = contactSchema.parse(body);
 
-    const emailTo = process.env.CONTACT_EMAIL_TO || "hello@admireit.co";
-    const emailFrom = process.env.POSTMARK_FROM_EMAIL || "hello@admireit.co";
+    const emailTo = process.env.CONTACT_EMAIL || "hello@admireit.co";
 
-    // If Postmark token is not set, log and return success for development
-    if (!process.env.POSTMARK_SERVER_TOKEN) {
-      console.log("Contact form submission (POSTMARK_SERVER_TOKEN not set):", data);
+    // If Gmail credentials are not set, log and return success for development
+    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+      console.log("Contact form submission (Gmail not configured):", data);
       return NextResponse.json(
         { message: "Message received (dev mode)" },
         { status: 200 }
       );
     }
 
-    await postmark.sendEmail({
-      From: emailFrom,
-      To: emailTo,
-      Subject: `New enquiry from ${data.name}${data.company ? ` (${data.company})` : ""}`,
-      HtmlBody: `
+    await transporter.sendMail({
+      from: `"AdmireTech" <${process.env.GMAIL_USER}>`,
+      to: emailTo,
+      replyTo: data.email,
+      subject: `New enquiry from ${data.name}${data.company ? ` (${data.company})` : ""}`,
+      html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${data.name}</p>
         <p><strong>Email:</strong> ${data.email}</p>
@@ -40,8 +40,6 @@ export async function POST(request: Request) {
         <p><strong>Message:</strong></p>
         <p>${data.message.replace(/\n/g, "<br>")}</p>
       `,
-      ReplyTo: data.email,
-      MessageStream: "outbound",
     });
 
     return NextResponse.json(
