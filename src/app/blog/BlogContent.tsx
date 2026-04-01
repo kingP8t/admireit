@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -15,6 +14,7 @@ import {
   TrendingUp,
   Clock,
   Sparkles,
+  Rocket,
 } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 
@@ -27,6 +27,18 @@ export interface SanityPostItem {
 }
 
 const posts = [
+  {
+    title: "Digital Leapfrogging: Skipping Legacy Tech and Going Straight to AI",
+    excerpt:
+      "The absence of legacy infrastructure is not a disadvantage \u2014 it is a strategic advantage. How businesses in emerging markets can bypass decades of enterprise software and build AI-native from day one.",
+    slug: "digital-leapfrogging-skip-legacy-tech-ai",
+    date: "1 Apr 2026",
+    readTime: "9 min",
+    category: "Digital Leapfrogging",
+    icon: Rocket,
+    gradient: "from-cyan-500/20 via-cyan-400/5 to-transparent",
+    accent: "bg-cyan-400/10 text-cyan-400",
+  },
   {
     title: "Why Africa and South Asia Are the Next Frontiers for AI-Powered Businesses",
     excerpt:
@@ -126,7 +138,6 @@ const posts = [
 ];
 
 export function BlogContent({ sanityPosts = [] }: { sanityPosts?: SanityPostItem[] }) {
-  const t = useTranslations("blog");
 
   // Filter out Sanity posts that duplicate static slugs
   const staticSlugs = new Set(posts.map((p) => p.slug));
@@ -144,10 +155,10 @@ export function BlogContent({ sanityPosts = [] }: { sanityPosts?: SanityPostItem
             className="max-w-3xl mb-16"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
-              {t("title")}
+              Blog
             </h1>
             <p className="mt-6 text-xl text-text-secondary">
-              {t("subtitle")}
+              Insights, tutorials, and industry updates
             </p>
           </motion.div>
 
@@ -197,7 +208,7 @@ export function BlogContent({ sanityPosts = [] }: { sanityPosts?: SanityPostItem
                       </p>
                     )}
                     <span className="mt-4 inline-flex items-center gap-1 text-accent text-sm font-medium group-hover:text-accent-warm transition-colors">
-                      {t("readMore")}
+                      Read More
                       <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </span>
                   </Card>
@@ -262,7 +273,7 @@ export function BlogContent({ sanityPosts = [] }: { sanityPosts?: SanityPostItem
 
                     {/* Read more */}
                     <span className="mt-4 inline-flex items-center gap-1 text-accent text-sm font-medium group-hover:text-accent-warm transition-colors">
-                      {t("readMore")}
+                      Read More
                       <ArrowRight
                         size={14}
                         className="group-hover:translate-x-1 transition-transform"

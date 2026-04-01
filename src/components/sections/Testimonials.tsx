@@ -1,6 +1,5 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import { Card } from "@/components/ui/Card";
@@ -34,12 +33,10 @@ const testimonials = [
 ];
 
 export function Testimonials() {
-  const t = useTranslations("testimonials");
-
   return (
     <section className="section-padding bg-background-secondary">
       <div className="container-wide mx-auto">
-        <SectionHeader title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeader title="What Our Clients Say" subtitle="Real results from real partnerships" />
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((item, i) => (

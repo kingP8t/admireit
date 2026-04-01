@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
@@ -57,16 +55,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const locale = await getLocale();
-  const messages = await getMessages();
-
   return (
-    <html lang={locale} className="dark">
+    <html lang="en" className="dark">
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-EPWF6JQHYE"
@@ -84,13 +79,11 @@ export default async function RootLayout({
         <WebsiteJsonLd />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
-        <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-          <WhatsAppButton />
-          <CookieConsent />
-        </NextIntlClientProvider>
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
+        <WhatsAppButton />
+        <CookieConsent />
       </body>
     </html>
   );

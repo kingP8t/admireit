@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   Send,
@@ -53,7 +52,6 @@ const offices = [
 ];
 
 export function ContactContent() {
-  const t = useTranslations("contact");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [formData, setFormData] = useState({
     name: "",
@@ -102,10 +100,10 @@ export function ContactContent() {
               animate={{ opacity: 1, x: 0 }}
             >
               <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-                {t("title")}
+                Get in Touch
               </h1>
               <p className="text-text-secondary text-lg mb-4">
-                {t("subtitle")}
+                Tell us about your project and we&apos;ll get back to you within 24 hours
               </p>
               <p className="text-text-secondary text-sm leading-relaxed mb-8">
                 Whether you have a clear project brief or just an idea you want to explore, we&apos;re here to help. Most clients start with a free 30-minute strategy call where we assess your needs and outline a practical path forward. No sales pressure — just honest advice from engineers who build AI systems every day.
@@ -115,7 +113,7 @@ export function ContactContent() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="name" className="block text-sm text-text-secondary mb-2">
-                      {t("name")}
+                      Full Name
                     </label>
                     <input
                       id="name"
@@ -129,7 +127,7 @@ export function ContactContent() {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm text-text-secondary mb-2">
-                      {t("email")}
+                      Email Address
                     </label>
                     <input
                       id="email"
@@ -146,7 +144,7 @@ export function ContactContent() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="company" className="block text-sm text-text-secondary mb-2">
-                      {t("company")}
+                      Company
                     </label>
                     <input
                       id="company"
@@ -159,7 +157,7 @@ export function ContactContent() {
                   </div>
                   <div>
                     <label htmlFor="service" className="block text-sm text-text-secondary mb-2">
-                      {t("service")}
+                      Service Interest
                     </label>
                     <select
                       id="service"
@@ -169,18 +167,18 @@ export function ContactContent() {
                       className="w-full px-4 py-3 bg-card border border-white/10 rounded-lg text-white focus:outline-none focus:border-accent transition-colors"
                     >
                       <option value="">Select a service</option>
-                      <option value="ai-automation">{t("services.aiAutomation")}</option>
-                      <option value="custom-dev">{t("services.customDev")}</option>
-                      <option value="ai-chatbot">{t("services.aiChatbot")}</option>
-                      <option value="consulting">{t("services.consulting")}</option>
-                      <option value="other">{t("services.other")}</option>
+                      <option value="ai-automation">AI Automation</option>
+                      <option value="custom-dev">Custom Development</option>
+                      <option value="ai-chatbot">AI Chatbot</option>
+                      <option value="consulting">AI Consulting</option>
+                      <option value="other">Other</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm text-text-secondary mb-2">
-                    {t("message")}
+                    Your Message
                   </label>
                   <textarea
                     id="message"
@@ -200,10 +198,10 @@ export function ContactContent() {
                   className="w-full sm:w-auto"
                 >
                   {status === "sending" ? (
-                    t("sending")
+                    "Sending..."
                   ) : (
                     <>
-                      {t("submit")} <Send size={16} />
+                      Send Message <Send size={16} />
                     </>
                   )}
                 </Button>
@@ -215,7 +213,7 @@ export function ContactContent() {
                     className="flex items-center gap-2 text-green-400 text-sm"
                   >
                     <CheckCircle size={16} />
-                    {t("success")}
+                    Message sent successfully! We&apos;ll be in touch soon.
                   </motion.div>
                 )}
 
@@ -226,7 +224,7 @@ export function ContactContent() {
                     className="flex items-center gap-2 text-red-400 text-sm"
                   >
                     <AlertCircle size={16} />
-                    {t("error")}
+                    Something went wrong. Please try again.
                   </motion.div>
                 )}
               </form>

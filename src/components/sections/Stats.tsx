@@ -1,28 +1,25 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "150+", key: "projects" },
-  { value: "80+", key: "clients" },
-  { value: "12+", key: "countries" },
-  { value: "99.9%", key: "uptime" },
+  { value: "150+", label: "Projects Delivered" },
+  { value: "80+", label: "Happy Clients" },
+  { value: "12+", label: "Countries Served" },
+  { value: "99.9%", label: "Uptime Guarantee" },
 ];
 
 export function Stats() {
-  const t = useTranslations("stats");
-
   return (
     <section className="section-padding">
       <div className="container-wide mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-16">
-          {t("title")}
+          Trusted by Businesses Worldwide
         </h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, i) => (
             <motion.div
-              key={stat.key}
+              key={stat.label}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -33,7 +30,7 @@ export function Stats() {
                 {stat.value}
               </div>
               <div className="mt-2 text-text-secondary text-sm">
-                {t(stat.key)}
+                {stat.label}
               </div>
             </motion.div>
           ))}

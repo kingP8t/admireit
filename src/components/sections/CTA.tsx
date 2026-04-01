@@ -1,13 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import { CalBookingButton } from "@/components/CalBookingButton";
 
 export function CTA() {
-  const t = useTranslations("cta");
 
   return (
     <section className="section-padding">
@@ -23,14 +21,14 @@ export function CTA() {
 
           <div className="relative z-10">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-              {t("title")}
+              Ready to Transform Your Business?
             </h2>
             <p className="mt-4 text-text-secondary text-lg max-w-xl mx-auto">
-              {t("description")}
+              Let&apos;s discuss how AI can accelerate your growth. Book a free consultation today.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 justify-center">
               <CalBookingButton className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-accent-warm transition-colors">
-                {t("button")}
+                Book a Call
                 <Calendar size={18} />
               </CalBookingButton>
               <Link

@@ -1,15 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 import { MapPin, Mail } from "lucide-react";
 
 const quickLinks = [
-  { href: "/about", key: "about" },
-  { href: "/services", key: "services" },
-  { href: "/portfolio", key: "portfolio" },
-  { href: "/blog", key: "blog" },
-  { href: "/contact", key: "contact" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 const offices = [
@@ -31,9 +30,6 @@ const offices = [
 ];
 
 export function Footer() {
-  const t = useTranslations("footer");
-  const nav = useTranslations("nav");
-
   return (
     <footer className="bg-background-secondary border-t border-white/5">
       <div className="container-wide mx-auto section-padding">
@@ -44,7 +40,7 @@ export function Footer() {
               Admire<span className="text-accent">Tech</span>
             </Link>
             <p className="mt-4 text-text-secondary text-sm leading-relaxed">
-              {t("description")}
+              AI-powered digital agency helping businesses transform with intelligent solutions.
             </p>
             <a
               href="mailto:hello@admireit.co"
@@ -58,7 +54,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-white font-semibold mb-4">
-              {t("quickLinks")}
+              Quick Links
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
@@ -67,7 +63,7 @@ export function Footer() {
                     href={link.href}
                     className="text-text-secondary text-sm hover:text-accent transition-colors"
                   >
-                    {nav(link.key)}
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -77,7 +73,7 @@ export function Footer() {
           {/* Office Addresses */}
           <div>
             <h3 className="text-white font-semibold mb-4">
-              {t("getInTouch")}
+              Get in Touch
             </h3>
             <ul className="space-y-4">
               {offices.map((office) => (
@@ -124,7 +120,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-text-secondary text-sm">
-            &copy; {new Date().getFullYear()} Admire Tech Ltd. {t("rights")}
+            &copy; {new Date().getFullYear()} Admire Tech Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Bot, Zap, Code, Brain, Target, Users, Check, ArrowRight, Globe, Clock, Award, TrendingUp, Search, Wrench, Rocket, BarChart3 } from "lucide-react";
 import { Card } from "@/components/ui/Card";
@@ -119,8 +118,6 @@ const services = [
 ];
 
 export function ServicesContent() {
-  const t = useTranslations("services");
-
   return (
     <div className="pt-20">
       <section className="section-padding">
@@ -131,10 +128,10 @@ export function ServicesContent() {
             className="max-w-3xl mb-16"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
-              {t("title")}
+              Our Services
             </h1>
             <p className="mt-6 text-xl text-text-secondary">
-              {t("subtitle")}
+              End-to-end AI and digital solutions tailored to your business needs
             </p>
             <p className="mt-4 text-text-secondary leading-relaxed">
               Whether you need an AI chatbot that handles thousands of customer conversations, workflow automation that saves your team 20+ hours per week, or a full-stack application with deep AI integration — we deliver production-grade solutions that drive measurable ROI. Our teams in London, Pune, and Lagos work across time zones to ship faster, and our outcome-based model means you only pay for what gets built.

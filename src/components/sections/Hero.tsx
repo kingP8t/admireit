@@ -1,12 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
-  const t = useTranslations("hero");
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -31,27 +29,18 @@ export function Hero() {
           >
             <Sparkles size={16} className="text-accent" />
             <span className="text-accent text-sm font-medium">
-              {t("tagline")}
+              AI-Powered Digital Agency
             </span>
           </motion.div>
 
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            {t("title").split("Intelligent").map((part, i) =>
-              i === 0 ? (
-                <span key={i}>
-                  {part}
-                  <span className="gradient-text">Intelligent</span>
-                </span>
-              ) : (
-                <span key={i}>{part}</span>
-              )
-            )}
+            We Build <span className="gradient-text">Intelligent</span> Solutions That Drive Growth
           </h1>
 
           {/* Description */}
           <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl leading-relaxed">
-            {t("description")}
+            From AI automation to custom development, we help businesses across London, Pune, and Lagos transform with cutting-edge technology.
           </p>
 
           {/* CTAs */}
@@ -60,7 +49,7 @@ export function Hero() {
               href="/contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-accent-warm transition-colors group"
             >
-              {t("cta")}
+              Start Your Project
               <ArrowRight
                 size={18}
                 className="group-hover:translate-x-1 transition-transform"
@@ -70,7 +59,7 @@ export function Hero() {
               href="/portfolio"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/10 text-white font-semibold rounded-lg hover:bg-card transition-colors"
             >
-              {t("secondaryCta")}
+              View Our Work
             </Link>
           </div>
         </motion.div>

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/Card";
@@ -62,7 +61,6 @@ const caseStudies = [
 ];
 
 export function PortfolioContent({ sanityCaseStudies = [] }: { sanityCaseStudies?: SanityCaseStudyItem[] }) {
-  const t = useTranslations("portfolio");
 
   // Filter out Sanity case studies that duplicate static slugs
   const staticSlugs = new Set(caseStudies.map((s) => s.slug));
@@ -80,10 +78,10 @@ export function PortfolioContent({ sanityCaseStudies = [] }: { sanityCaseStudies
             className="max-w-3xl mb-16"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
-              {t("title")}
+              Our Work
             </h1>
             <p className="mt-6 text-xl text-text-secondary">
-              {t("subtitle")}
+              Case studies showcasing real impact
             </p>
             <p className="mt-4 text-text-secondary leading-relaxed">
               From AI-powered credit scoring for microfinance banks to enterprise chatbots processing thousands of conversations daily, every project below delivered measurable business outcomes. We work with startups, scale-ups, and enterprises across fintech, e-commerce, logistics, and SaaS — building solutions that go live in weeks, not months.
@@ -138,7 +136,7 @@ export function PortfolioContent({ sanityCaseStudies = [] }: { sanityCaseStudies
                     href={`/portfolio/${study.slug.current}`}
                     className="mt-4 inline-flex items-center gap-1 text-accent text-sm font-medium hover:text-accent-warm transition-colors group"
                   >
-                    {t("viewCase")}
+                    View Case Study
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Card>
@@ -179,7 +177,7 @@ export function PortfolioContent({ sanityCaseStudies = [] }: { sanityCaseStudies
                     href={`/portfolio/${study.slug}`}
                     className="mt-4 inline-flex items-center gap-1 text-accent text-sm font-medium hover:text-accent-warm transition-colors group"
                   >
-                    {t("viewCase")}
+                    View Case Study
                     <ArrowRight
                       size={14}
                       className="group-hover:translate-x-1 transition-transform"

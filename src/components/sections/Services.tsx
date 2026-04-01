@@ -1,6 +1,5 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Bot, Zap, Code, Brain, Target, Users } from "lucide-react";
 import { Card } from "@/components/ui/Card";
@@ -46,12 +45,10 @@ const services = [
 ];
 
 export function Services() {
-  const t = useTranslations("services");
-
   return (
     <section className="section-padding bg-background-secondary">
       <div className="container-wide mx-auto">
-        <SectionHeader title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeader title="Our Services" subtitle="End-to-end AI and digital solutions tailored to your business needs" />
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => (

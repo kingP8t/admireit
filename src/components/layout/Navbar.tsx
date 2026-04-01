@@ -3,25 +3,23 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CalBookingButton } from "@/components/CalBookingButton";
 
 const navLinks = [
-  { href: "/", key: "home" },
-  { href: "/about", key: "about" },
-  { href: "/services", key: "services" },
-  { href: "/portfolio", key: "portfolio" },
-  { href: "/blog", key: "blog" },
-  { href: "/contact", key: "contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const t = useTranslations("nav");
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
@@ -47,11 +45,11 @@ export function Navbar() {
                     : "text-text-secondary"
                 )}
               >
-                {t(link.key)}
+                {link.label}
               </Link>
             ))}
             <CalBookingButton className="px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-lg hover:bg-accent-warm transition-colors">
-              {t("getStarted")}
+              Get Started
             </CalBookingButton>
           </div>
 
@@ -87,12 +85,12 @@ export function Navbar() {
                         : "text-text-secondary hover:bg-card hover:text-white"
                     )}
                   >
-                    {t(link.key)}
+                    {link.label}
                   </Link>
                 ))}
                 <div className="mx-4 mt-4">
                   <CalBookingButton className="block w-full px-5 py-3 bg-accent text-white text-sm font-semibold rounded-lg text-center hover:bg-accent-warm transition-colors">
-                    {t("getStarted")}
+                    Get Started
                   </CalBookingButton>
                 </div>
               </div>

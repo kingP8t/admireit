@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight, Bot, Zap, Target, type LucideIcon } from "lucide-react";
 import { Card } from "@/components/ui/Card";
@@ -58,13 +57,12 @@ const fallbackPosts: FeaturedPostItem[] = [
 ];
 
 export function FeaturedBlog({ posts }: { posts?: FeaturedPostItem[] }) {
-  const t = useTranslations("blog");
   const displayPosts = posts && posts.length > 0 ? posts : fallbackPosts;
 
   return (
     <section className="section-padding bg-background-secondary">
       <div className="container-wide mx-auto">
-        <SectionHeader title={t("latestTitle")} subtitle={t("subtitle")} />
+        <SectionHeader title="Latest from the Blog" subtitle="Insights, tutorials, and industry updates" />
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayPosts.map((post, i) => (
@@ -119,7 +117,7 @@ export function FeaturedBlog({ posts }: { posts?: FeaturedPostItem[] }) {
                   href={`/blog/${post.slug}`}
                   className="mt-4 inline-flex items-center gap-1 text-accent text-sm font-medium hover:text-accent-warm transition-colors group"
                 >
-                  {t("readMore")}
+                  Read More
                   <ArrowRight
                     size={14}
                     className="group-hover:translate-x-1 transition-transform"
