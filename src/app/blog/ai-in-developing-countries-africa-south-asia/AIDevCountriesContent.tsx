@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -125,9 +126,11 @@ export function AIDevCountriesContent() {
         </h1>
 
         <div className="flex items-center gap-3 mt-4 mb-8">
-          <img
+          <Image
             src="/images/team/peter-king.webp"
             alt="Peter King, CEO and CTO of AdmireTech"
+            width={40}
+            height={40}
             className="w-10 h-10 rounded-full object-cover"
           />
           <div>
@@ -639,9 +642,11 @@ export function AIDevCountriesContent() {
           className="mt-12 pt-8 border-t border-white/5"
         >
           <div className="flex items-start gap-4">
-            <img
+            <Image
               src="/images/team/peter-king.webp"
               alt="Peter King, CEO and CTO of AdmireTech"
+              width={56}
+              height={56}
               className="w-14 h-14 rounded-full object-cover shrink-0"
             />
             <div>

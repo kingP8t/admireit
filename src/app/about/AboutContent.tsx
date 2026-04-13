@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
@@ -231,8 +232,7 @@ function TeamAvatar({ name, image }: { name: string; image: string }) {
   }
 
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
+    <Image
       src={image}
       alt={name}
       width={96}

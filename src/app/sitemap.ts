@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/ai-strategy-lean-budget-startups-emerging-markets",
     "/blog/ai-chatbots-solving-customer-support-gap",
     "/blog/mvp-to-scale-nigerian-startups-ai-automation",
+    "/blog/digital-leapfrogging-skip-legacy-tech-ai",
   ];
 
   const portfolioPages = [

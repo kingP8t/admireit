@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -219,7 +220,7 @@ export function AIStrategyContent() {
         </h1>
 
         <div className="flex items-center gap-3 mt-4 mb-8">
-          <img src="/images/team/peter-king.webp" alt="Peter King" className="w-10 h-10 rounded-full object-cover" />
+          <Image src="/images/team/peter-king.webp" alt="Peter King" width={40} height={40} className="w-10 h-10 rounded-full object-cover" />
           <div>
             <p className="text-sm font-medium text-white">Peter King</p>
             <p className="text-xs text-gray-400">CEO &amp; CTO, AdmireTech · Published 5 March 2026</p>
