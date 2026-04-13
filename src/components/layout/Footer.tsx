@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { MapPin, Mail } from "lucide-react";
+import { MapPin, Mail, Shield } from "lucide-react";
 
 const quickLinks = [
   { href: "/about", label: "About" },
@@ -117,8 +117,68 @@ export function Footer() {
           </div>
         </div>
 
+        {/* ISO Certifications */}
+        <div className="mt-12 pt-8 border-t border-white/5">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
+            <div className="flex items-center gap-5">
+              {[
+                { standard: "27701", label: "Privacy Information Management" },
+                { standard: "27001", label: "Information Security Management" },
+              ].map((cert) => (
+                <div key={cert.standard} className="group relative flex items-center gap-3">
+                  {/* Badge */}
+                  <div className="relative w-[72px] h-[72px] flex-shrink-0">
+                    {/* Outer ring */}
+                    <div className="absolute inset-0 rounded-full border-2 border-accent/40 bg-gradient-to-b from-accent/10 to-transparent" />
+                    {/* Inner circle */}
+                    <div className="absolute inset-[5px] rounded-full bg-background border border-accent/30 flex flex-col items-center justify-center gap-0.5">
+                      <span className="text-[8px] font-medium tracking-wider text-accent/80 uppercase">
+                        Certified
+                      </span>
+                      {/* Globe icon */}
+                      <div className="relative w-5 h-5">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          className="w-full h-full text-accent"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                        >
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="M2 12h20" />
+                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                          <path d="M4.5 5.5h15" />
+                          <path d="M4.5 18.5h15" />
+                        </svg>
+                      </div>
+                      <span className="text-[9px] font-bold text-white leading-none">
+                        ISO
+                      </span>
+                      <span className="text-[8px] font-semibold text-accent leading-none">
+                        {cert.standard}
+                      </span>
+                    </div>
+                  </div>
+                  {/* Label (visible on hover / always on desktop) */}
+                  <div className="hidden sm:block">
+                    <p className="text-[10px] font-medium text-text-secondary/60 leading-tight max-w-[120px]">
+                      {cert.label}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="flex items-center gap-2 text-text-secondary/50">
+              <Shield size={14} className="text-accent/50" />
+              <span className="text-[11px]">
+                Enterprise-grade security &amp; privacy compliance
+              </span>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-text-secondary text-sm">
             &copy; {new Date().getFullYear()} Admire Tech Ltd. All rights reserved.
           </p>
