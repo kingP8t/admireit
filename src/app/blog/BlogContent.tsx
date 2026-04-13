@@ -15,6 +15,7 @@ import {
   Clock,
   Sparkles,
   Rocket,
+  MapPin,
 } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 
@@ -27,6 +28,18 @@ export interface SanityPostItem {
 }
 
 const posts = [
+  {
+    title: "AI Adoption in Nigeria: Opportunities, Challenges, and What\u2019s Next",
+    excerpt:
+      "88% of Nigerians use AI chatbots \u2014 the highest rate in the world. The local AI market is on track to hit $434.4M in 2026. Here is what is driving adoption, what is holding it back, and where it goes next.",
+    slug: "ai-adoption-nigeria-opportunities-challenges",
+    date: "14 Apr 2026",
+    readTime: "10 min",
+    category: "AI & Africa",
+    icon: MapPin,
+    gradient: "from-emerald-500/20 via-accent/5 to-transparent",
+    accent: "bg-emerald-400/10 text-emerald-400",
+  },
   {
     title: "Digital Leapfrogging: Skipping Legacy Tech and Going Straight to AI",
     excerpt:
