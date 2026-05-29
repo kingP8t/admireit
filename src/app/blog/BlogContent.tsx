@@ -16,6 +16,7 @@ import {
   Sparkles,
   Rocket,
   MapPin,
+  Landmark,
 } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 
@@ -28,6 +29,18 @@ export interface SanityPostItem {
 }
 
 const posts = [
+  {
+    title: "AI for Microfinance Banks in Nigeria: Use Cases, ROI & Compliance",
+    excerpt:
+      "Credit scoring for thin-file customers, fraud detection, WhatsApp support and automated loan origination \u2014 how Nigerian microfinance banks are using AI to widen access and cut risk.",
+    slug: "ai-microfinance-banks-nigeria",
+    date: "29 May 2026",
+    readTime: "9 min",
+    category: "AI & Fintech",
+    icon: Landmark,
+    gradient: "from-emerald-500/20 via-accent/5 to-transparent",
+    accent: "bg-emerald-400/10 text-emerald-400",
+  },
   {
     title: "AI Adoption in Nigeria: Opportunities, Challenges, and What\u2019s Next",
     excerpt:

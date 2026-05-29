@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogPages = [
+    "/blog/ai-microfinance-banks-nigeria",
     "/blog/ai-chatbots-customer-support",
     "/blog/ai-automation-small-business",
     "/blog/ai-strategy-2026",
