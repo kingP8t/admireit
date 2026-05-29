@@ -7,17 +7,17 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    company: "TechFlow Solutions",
-    role: "CTO",
+    name: "Alh. Yusuf Ibrahim",
+    company: "National Association of Microfinance Banks, Nigeria",
+    role: "",
     quote:
       "AdmireTech transformed our customer support with an AI chatbot that handles 70% of queries automatically. Game-changer for our business.",
     rating: 5,
   },
   {
-    name: "Rajesh Patel",
-    company: "InnovatePune",
-    role: "Founder",
+    name: "Rabe Musa",
+    company: "Bayajidda Microfinance",
+    role: "",
     quote:
       "Their AI automation saved us 200+ hours per month. The team is brilliant, responsive, and truly understands business needs.",
     rating: 5,
@@ -66,7 +66,7 @@ export function Testimonials() {
                     {item.name}
                   </p>
                   <p className="text-text-secondary text-xs">
-                    {item.role}, {item.company}
+                    {item.role ? `${item.role}, ${item.company}` : item.company}
                   </p>
                 </div>
               </Card>
