@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, JsonLdScript } from "@/components/JsonLd";
 import { AIProductManagementContent } from "./AIProductManagementContent";
 
 export const metadata: Metadata = {
@@ -118,20 +117,8 @@ export default function AIProductManagementPage() {
           },
         ]}
       />
-      <Script
-        id="article-jsonld"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(articleJsonLd)}
-      </Script>
-      <Script
-        id="faq-jsonld"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(faqJsonLd)}
-      </Script>
+      <JsonLdScript data={articleJsonLd} />
+      <JsonLdScript data={faqJsonLd} />
       <AIProductManagementContent />
     </>
   );

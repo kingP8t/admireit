@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, JsonLdScript } from "@/components/JsonLd";
 import { AIChatbotsCSBlogContent } from "./AIChatbotsCSBlogContent";
 
 export const metadata: Metadata = {
@@ -96,20 +95,8 @@ export default function AIChatbotsCSBlogPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", url: "https://www.admireit.co" }, { name: "Blog", url: "https://www.admireit.co/blog" }, { name: "How AI Chatbots Are Revolutionising Customer Support in 2026", url: "https://www.admireit.co/blog/ai-chatbots-customer-support" }]} />
-      <Script
-        id="article-jsonld"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(articleJsonLd)}
-      </Script>
-      <Script
-        id="faq-jsonld"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(faqJsonLd)}
-      </Script>
+      <JsonLdScript data={articleJsonLd} />
+      <JsonLdScript data={faqJsonLd} />
       <AIChatbotsCSBlogContent />
     </>
   );

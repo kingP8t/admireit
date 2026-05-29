@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, JsonLdScript } from "@/components/JsonLd";
 import { AIStrategyContent } from "./AIStrategyContent";
 
 export const metadata: Metadata = {
@@ -95,20 +94,8 @@ export default function AIStrategyPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", url: "https://www.admireit.co" }, { name: "Blog", url: "https://www.admireit.co/blog" }, { name: "Why Every Business Needs an AI Strategy in 2026", url: "https://www.admireit.co/blog/ai-strategy-2026" }]} />
-      <Script
-        id="article-jsonld"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(articleJsonLd)}
-      </Script>
-      <Script
-        id="faq-jsonld"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(faqJsonLd)}
-      </Script>
+      <JsonLdScript data={articleJsonLd} />
+      <JsonLdScript data={faqJsonLd} />
       <AIStrategyContent />
     </>
   );

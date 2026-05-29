@@ -246,3 +246,19 @@ export function BreadcrumbJsonLd({
     />
   );
 }
+
+// Generic server-rendered JSON-LD emitter so structured data is present in the
+// initial HTML (visible to AI crawlers / first-pass indexers that don't run JS).
+// `data` is always a hardcoded schema object defined in source, never user
+// input, so serializing it via dangerouslySetInnerHTML is safe — same pattern
+// as the trusted schema components above.
+export function JsonLdScript({ data }: { data: object }) {
+  const jsonString = JSON.stringify(data);
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: jsonString }}
+    />
+  );
+}

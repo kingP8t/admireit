@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, JsonLdScript } from "@/components/JsonLd";
 import { AIStrategyLeanBudgetContent } from "./AIStrategyLeanBudgetContent";
 
 export const metadata: Metadata = {
@@ -156,27 +155,9 @@ export default function AIStrategyLeanBudgetPage() {
           },
         ]}
       />
-      <Script
-        id="article-jsonld"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(articleJsonLd)}
-      </Script>
-      <Script
-        id="faq-jsonld"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(faqJsonLd)}
-      </Script>
-      <Script
-        id="howto-jsonld"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(howToJsonLd)}
-      </Script>
+      <JsonLdScript data={articleJsonLd} />
+      <JsonLdScript data={faqJsonLd} />
+      <JsonLdScript data={howToJsonLd} />
       <AIStrategyLeanBudgetContent />
     </>
   );

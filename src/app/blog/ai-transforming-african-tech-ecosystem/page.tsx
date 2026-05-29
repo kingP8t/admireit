@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, JsonLdScript } from "@/components/JsonLd";
 import { AIAfricanTechContent } from "./AIAfricanTechContent";
 
 export const metadata: Metadata = {
@@ -97,20 +96,8 @@ export default function AIAfricanTechPage() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", url: "https://www.admireit.co" }, { name: "Blog", url: "https://www.admireit.co/blog" }, { name: "5 Ways AI Is Transforming the African Tech Ecosystem in 2026", url: "https://www.admireit.co/blog/ai-transforming-african-tech-ecosystem" }]} />
-      <Script
-        id="article-jsonld"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(articleJsonLd)}
-      </Script>
-      <Script
-        id="faq-jsonld"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(faqJsonLd)}
-      </Script>
+      <JsonLdScript data={articleJsonLd} />
+      <JsonLdScript data={faqJsonLd} />
       <AIAfricanTechContent />
     </>
   );
