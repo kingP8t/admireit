@@ -8,6 +8,8 @@ import {
   Users,
   MapPin,
   Zap,
+  PiggyBank,
+  Car,
   type LucideIcon,
 } from "lucide-react";
 
@@ -20,6 +22,20 @@ export interface PortfolioCoverConfig {
 }
 
 const coverConfigs: Record<string, PortfolioCoverConfig> = {
+  "crm-ai-agent-motor-insurance": {
+    icon: Car,
+    gradient: "from-sky-600/30 via-sky-400/10 to-transparent",
+    accentColor: "text-sky-400",
+    label: "Insurance AI",
+    metric: "CRM AI agent",
+  },
+  "ai-savings-budgeting-mfi": {
+    icon: PiggyBank,
+    gradient: "from-teal-600/30 via-teal-400/10 to-transparent",
+    accentColor: "text-teal-400",
+    label: "Savings AI",
+    metric: "Goal-based savings",
+  },
   "mfb-ai-transformation": {
     icon: Landmark,
     gradient: "from-emerald-600/30 via-emerald-500/10 to-transparent",

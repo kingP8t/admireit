@@ -78,6 +78,12 @@ export default function RootLayout({
             gtag('config', 'G-EPWF6JQHYE');
           `}
         </Script>
+        <Script
+          src="https://datafa.st/js/script.js"
+          data-website-id="dfid_sbtMj0kCOmwAYK0IDFx60"
+          data-domain="admireit.co"
+          strategy="afterInteractive"
+        />
         <OrganizationJsonLd />
         <WebsiteJsonLd />
       </head>

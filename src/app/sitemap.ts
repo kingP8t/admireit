@@ -41,6 +41,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const portfolioPages = [
+    "/portfolio/crm-ai-agent-motor-insurance",
+    "/portfolio/ai-savings-budgeting-mfi",
     "/portfolio/mfb-ai-transformation",
     "/portfolio/easybuy-vip-loan",
     "/portfolio/llm-enterprise-chatbot",

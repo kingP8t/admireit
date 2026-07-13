@@ -19,6 +19,22 @@ export interface SanityCaseStudyItem {
 
 const caseStudies = [
   {
+    title: "CRM AI Agent for a Nigerian Motor Insurer",
+    client: "Anonymised · Nigerian Motor Insurer",
+    description: "Designed and deployed a CRM AI agent on top of the insurer's existing CRM and policy systems — turning enquiries, renewals, and claims intake into structured, largely automated workflows, without replacing human agents.",
+    technologies: ["CRM AI Agent", "WhatsApp", "Claims Triage", "Workflow Automation"],
+    slug: "crm-ai-agent-motor-insurance",
+    featured: true,
+  },
+  {
+    title: "AI-Driven Savings & Budgeting for a Nigerian Microfinance Institution",
+    client: "Anonymised · Nigerian MFI",
+    description: "Built a custom AI budgeting engine that analyses transaction patterns to deliver personalised savings nudges and goal-based savings pots — helping customers with irregular income save more consistently.",
+    technologies: ["ML", "SMS", "Behavioural Analytics", "Consent-First Data"],
+    slug: "ai-savings-budgeting-mfi",
+    featured: true,
+  },
+  {
     title: "AI-Driven Transformation for a Nigerian Microfinance Bank",
     client: "National MFB",
     description: "Redesigned credit scoring, loan management, fraud detection, and customer service using production-grade AI \u2014 cutting approval times from days to under 2 hours.",
