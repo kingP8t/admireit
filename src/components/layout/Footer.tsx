@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { MapPin, Mail } from "lucide-react";
+import { AskAI } from "@/components/AskAI";
 
 const quickLinks = [
   { href: "/about", label: "About" },
@@ -33,6 +34,11 @@ export function Footer() {
   return (
     <footer className="bg-background-secondary border-t border-white/5">
       <div className="container-wide mx-auto section-padding">
+        {/* Ask an AI about us */}
+        <div className="pb-10 mb-12 border-b border-white/5">
+          <AskAI />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
